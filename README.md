@@ -1,14 +1,15 @@
 Emacs Lisp name-generator
 =========================
 
-Docker-like names generator written in Emacs Lisp (elisp).
+Docker-like names generator written in Emacs Lisp (elisp). It creates
+names like "flamboyant_neumann", "distracted_kepler", and 
+"relaxed_turing" but **never** "boring_wozniak".
 
-### Usage
 
 ## Installation
 
 Place `name-generator.el` inside the directory of your choice (e.g. `~/.emacs.d/lisp/`)
-and add the following to your Emacs `init.el`, `~/.emacs/`, ...:
+and add the following to your Emacs `init.el`, `~/.emacs`, ...:
 
 ```el
 (add-to-list 'load-path "~/.emacs.d/lisp/")
