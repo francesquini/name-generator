@@ -9,7 +9,7 @@
 ;; MIT License
 
 
-(defvar-local left (list
+(defvar-local name-generator-left (list
   "admiring"
   "adoring"
   "affectionate"
@@ -105,7 +105,7 @@
   "zen"
     ))
 
-(defvar-local right (list
+(defvar-local name-generator-right (list
 
   ;; Muhammad ibn Jābir al-Ḥarrānī al-Battānī was a founding father of astronomy. https://en.wikipedia.org/wiki/Mu%E1%B8%A5ammad_ibn_J%C4%81bir_al-%E1%B8%A4arr%C4%81n%C4%AB_al-Batt%C4%81n%C4%AB
   "albattani"
@@ -591,15 +591,15 @@
   ))
 
 
-(defun random-element (list)
+(defun name-generator-random-element (list)
   "Gets a random element from the list."
   (nth (random (length list)) list))
 
 (defun generate-random-name ()
   "Gets a randomly generated name."
   (let* (
-         (adje (random-element left))
-         (name (random-element right)))
+         (adje (name-generator-random-element name-generator-left))
+         (name (name-generator-random-element name-generator-right)))
     (if (and (string= adje "boring") (string= name "wozniak"))
         (generate-random-name)
         (concat adje "_" name)
