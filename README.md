@@ -26,12 +26,11 @@ more importantly, human-friendly names like so:
 
 ```el
 (defun open-new-random-named-scratch ()
-  "Opens a new scratch buffer with a friendly name"
+  "Opens a new scratch buffer with a friendly name."
   (interactive)
-  (switch-to-buffer (loop for name = (generate-random-name)
+  (switch-to-buffer (cl-loop for name = (generate-random-name)
                           while (get-buffer name)
-                          finally return name)))
-
+                          finally (cl-return name))))
 (global-set-key (kbd "C-c n") 'open-new-random-named-scratch)
 ```
 
