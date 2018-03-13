@@ -11,10 +11,7 @@ Place `name-generator.el` inside the directory of your choice (e.g. `~/.emacs.d/
 and add the following to your Emacs `init.el`, `~/.emacs/`, ...:
 
 ```el
-;; Tell emacs where is your personal elisp lib dir
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-
-;; load the packaged named xyz.
 (load "name-generator")
 ```
 
@@ -22,7 +19,7 @@ and add the following to your Emacs `init.el`, `~/.emacs/`, ...:
 
 Basic usage:
 
-M-: (generate-random-name)
+`M-:` or `eval-expression`: `(generate-random-name)`
 
 Personally, I use it to create temp scratch buffers with creative and,
 more importantly, human-friendly names like so:
